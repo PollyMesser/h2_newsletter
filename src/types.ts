@@ -1,4 +1,5 @@
 export interface Event {
+  category: string;
   title: string;
   date: string;
   time: string;

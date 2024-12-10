@@ -170,6 +170,7 @@ export default function NewsletterPreview({ data }: Props) {
                     (event) => `
                   <div class="event-wrapper">
                       <div class="event-card">
+                        <p>[${event.category}]</p>
                           <div class="event-title">${formatText(
                             event.title
                           )}</div>

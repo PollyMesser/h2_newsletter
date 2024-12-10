@@ -11,6 +11,7 @@ interface Props {
 export default function NewsletterForm({ data, onChange }: Props) {
   const addEvent = () => {
     const newEvent: Event = {
+      category: '',
       title: '',
       date: '',
       time: '',
@@ -117,6 +118,182 @@ export default function NewsletterForm({ data, onChange }: Props) {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="px-3 py-2 border rounded-md col-span-2">
+              <div className="flex">
+                {/* Linke Spalte mit 6 Radio Buttons */}
+                <div className="flex-1">
+                  <div>
+                    <input
+                      type="radio"
+                      id={`zawiw-${index}`}
+                      name={`category-${index}`}
+                      value="ZAWiW"
+                      checked={event.category === 'ZAWiW'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`zawiw-${index}`}>ZAWiW</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id={`studiumgenerale-${index}`}
+                      name={`category-${index}`}
+                      value="studium generale"
+                      checked={event.category === 'studium generale'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`studiumgenerale-${index}`}>
+                      Studium Generale
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id={`vile-${index}`}
+                      name={`category-${index}`}
+                      value="ViLE-Webinare"
+                      checked={event.category === 'ViLE-Webinare'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`vile-${index}`}>ViLE-Webinare</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id={`FL-${index}`}
+                      name={`category-${index}`}
+                      value="Forschendes Lernen"
+                      checked={event.category === 'Forschendes Lernen'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`FL-${index}`}>Forschendes Lernen</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id={`bürgerwissenschaften-${index}`}
+                      name={`category-${index}`}
+                      value="Bürgerwissenschaften"
+                      checked={event.category === 'Bürgerwissenschaften'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`bürgerwissenschaften-${index}`}>
+                      Bürgerwissenschaften
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id={`andere-${index}`}
+                      name={`category-${index}`}
+                      value="Andere Abteilungen Uni"
+                      checked={event.category === 'Andere Abteilungen Uni'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`andere-${index}`}>
+                      Andere Abteilungen Uni
+                    </label>
+                  </div>
+                </div>
+
+                {/* Rechte Spalte mit 5 Radio Buttons */}
+                <div className="flex-1">
+                  <div>
+                    <input
+                      type="radio"
+                      id={`allgemein-${index}`}
+                      name={`category-${index}`}
+                      value="Uni allgemein"
+                      checked={event.category === 'Uni allgemein'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`allgemein-${index}`}>Uni allgemein</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id={`uug-${index}`}
+                      name={`category-${index}`}
+                      value="UUG"
+                      checked={event.category === 'UUG'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`uug-${index}`}>UUG</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id={`extern-${index}`}
+                      name={`category-${index}`}
+                      value="Externe Veranstaltung"
+                      checked={event.category === 'Externe Veranstaltung'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`extern-${index}`}>
+                      Externe Veranstaltung
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id={`studien-${index}`}
+                      name={`category-${index}`}
+                      value="studien"
+                      checked={event.category === 'studien'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`studien-${index}`}>
+                      Studien/Forschungshinweise
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id={`muz-${index}`}
+                      name={`category-${index}`}
+                      value="muz"
+                      checked={event.category === 'muz'}
+                      onChange={(e) =>
+                        updateEvent(index, { category: e.target.value })
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={`muz-${index}`}>Musikalisches Zentrum</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
               <input
                 placeholder="Event Title"
                 value={event.title}
