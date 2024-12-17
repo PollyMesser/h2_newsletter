@@ -39,7 +39,6 @@ export default function ExcelImport({ onImport }: Props) {
         }
 
         return {
-          category: row.category || '',
           title: row.summary || '',
           date,
           time,

@@ -95,6 +95,9 @@ export default function NewsletterPreview({ data }: Props) {
                 background-color: #407fb7;
                 color: white;
               }
+              .header h1 {
+                font-size: 1.5em;
+              }
               .content {
                 padding: 20px;
               }
